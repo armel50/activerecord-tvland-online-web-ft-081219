@@ -32,5 +32,5 @@ class Character < ActiveRecord::Base
   #     self.network_id = new_net
   #     self.save
   #   end
-  end
+  # end
 end
