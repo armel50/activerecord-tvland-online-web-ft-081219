@@ -11,12 +11,13 @@ class Show < ActiveRecord::Base
   
   def build_network(call_letters: )
     found = Network.find_by(call_letters: call_letters) 
-    if found 
+    p Network.all
+    # if found 
       
-    else
-      Network.create(call_letters: call_letters)
+    # else
+    #   Network.create(call_letters: call_letters)
   
-    end
+    # end
     
   end
 end
