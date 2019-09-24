@@ -16,7 +16,8 @@ class Show < ActiveRecord::Base
       
     else
      new_net= Network.create(call_letters: call_letters) 
-     
+     self.network_id = new_net.id 
+     self.save
   
     end
     
