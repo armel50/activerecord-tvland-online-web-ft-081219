@@ -15,7 +15,8 @@ class Show < ActiveRecord::Base
     if found 
       
     else
-      Network.create(call_letters: call_letters)
+     new_net= Network.create(call_letters: call_letters) 
+     
   
     end
     
