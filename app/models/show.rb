@@ -13,6 +13,7 @@ class Show < ActiveRecord::Base
     found = Network.find_by(call_letters: call_letters) 
     
     if found 
+      p self
        self.network_id = found.id
      self.save
     else
