@@ -14,13 +14,12 @@ class Show < ActiveRecord::Base
     
     if found 
       
-       self.network_id = found.id
+       self.network = found
    
     else
      new_net= Network.create(call_letters: call_letters) 
-     self.network_id = new_net.id 
-  
-  
+     self.network = new_net
+
     end
     
   end
