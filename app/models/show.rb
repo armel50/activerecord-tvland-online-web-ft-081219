@@ -6,6 +6,6 @@ class Show < ActiveRecord::Base
  
   def actors_list 
     self.actors.map {|actor|"#{actor.first_name} #{actor.last_name}"}
-    p self
+    
   end
 end
