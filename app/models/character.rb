@@ -13,12 +13,12 @@ class Character < ActiveRecord::Base
      if found_show 
        self.show = found_show 
        self.save
-       self
+       found_show
      else 
       new_show =  Show.create(name: name) 
        self.show = new_show  
        self.save
-       self
+       new_show
      end
   end
   
