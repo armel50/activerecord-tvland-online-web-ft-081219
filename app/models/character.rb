@@ -22,15 +22,15 @@ class Character < ActiveRecord::Base
      end
   end
   
-  def build_network(call_letters:)  
-    found_net = Network.find_by(call_letters: call_letters) 
-    if found_net
-      self.network_id = found_net
-      self.save
-    else
-      new_net =  Network.create(call_letters: call_letters)
-       self.network_id = new_net
-      self.save
-    end
+  # def build_network(call_letters:)  
+  #   found_net = Network.find_by(call_letters: call_letters) 
+  #   if found_net
+  #     self.network_id = found_net
+  #     self.save
+  #   else
+  #     new_net =  Network.create(call_letters: call_letters)
+  #     self.network_id = new_net
+  #     self.save
+  #   end
   end
 end
