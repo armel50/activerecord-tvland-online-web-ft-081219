@@ -29,6 +29,8 @@ class Character < ActiveRecord::Base
       self.save
     else
       new_net =  Network.create(call_letters: call_letters)
+       self.network_id = new_net
+      self.save
     end
   end
 end
