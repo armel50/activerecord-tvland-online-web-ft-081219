@@ -22,12 +22,12 @@ class Character < ActiveRecord::Base
      end
   end
   
-  def build_network(call_letters:)  
-    found_net = Network.find_by(call_letters: call_letters) 
-    if found_net
+  # def build_network(call_letters:)  
+  #   found_net = Network.find_by(call_letters: call_letters) 
+  #   if found_net
       
-    else
-      new_net =  Network.create(call_letters: call_letters)
-    end
-  end
+  #   else
+  #     new_net =  Network.create(call_letters: call_letters)
+  #   end
+  # end
 end
